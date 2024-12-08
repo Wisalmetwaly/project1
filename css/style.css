@@ -1,0 +1,927 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* header start */
+.header{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(25, 66, 53, 0.5);
+    top: 0;
+    position: fixed;
+    z-index: 10;
+}
+.header i{
+    font-size: 23px;
+    margin: 15px 25px;
+    float: left;
+    color: white;
+}
+.header-srch-bar{
+    width: 240px;
+    height: 30px;
+    margin-top: 10px;
+    border: 0;
+    border-radius: 100px;
+    position: relative;
+}
+.header .srch-i{
+    font-size: 16px;
+    color: black;
+    background: none;
+    border: none;
+    position: absolute;
+    z-index: 5;
+    top: 2px;
+    left: 65px;
+}
+.header-list{
+    list-style: none;
+    float: right;
+    margin-right: 70px;
+}
+.header-list li{
+    text-transform: capitalize;
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 13px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 1px;
+}
+/* header ends */
+/* home start */
+.home{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../imgs/wallpaper.jpg);
+    background-size: cover;
+    position: relative;
+}
+.home-overley , .icon-overley , .pet-overley{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.home-content{
+    width: 80%;
+    /* hero img */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50% , -50% );
+    text-align: center;
+    color: whitesmoke;
+    letter-spacing: 1px;
+}
+.home-title{
+    font-size: 55px;
+    text-transform: capitalize;
+}
+.home-p{
+    margin: 20px 0px;
+    color: rgb(190, 190, 190);
+}
+.home-btn{
+    width: 145px;
+    height: 53px;
+    border: 0;
+    border-radius: 15px;
+    font-size: 16px;
+    text-transform: uppercase
+}
+.home-btn-2{
+    background-color: rgb(25, 66, 53);
+    color: white;
+    margin-left: 10px;
+}
+.home-btn:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+/* home end */
+/* match start */
+.the-match , .the-services{
+    width: 100%;
+    height: 87vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.match-title , .services-title{
+    color: black;
+    margin-top: 80px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.match-line , .services-line{
+    width: 85px;
+    height: 4px;
+    margin: auto;
+    margin-top: 7px;
+    background-color: rgb(42, 141, 110);
+}
+.container{
+    width:85%;
+    margin: auto;
+}
+.match-parent{
+    overflow: auto;
+    padding-top: 70px;
+}
+.match-content , .services-content{
+    float: left;
+    width: 28%;
+    height: 230px; 
+    padding: 14px 18px;
+    text-align: center;
+    border: 1px solid rgb(25, 66, 53);
+    border-radius: 10px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    position: relative;
+    z-index: 2;
+}
+.match-con-2 , .services-con-2{
+    margin: 0px 8%;
+}
+.match-parent i{
+    margin: 5px 15px 10px 15px;
+    font-size: 30px;
+    color: rgb(42, 141, 110);
+}
+.match-parent h2{
+    font-size: 23px;
+    margin: 10px 0px;
+}
+.match-parent p{
+    font-size: 16px;
+    margin: 20px 0px;
+    color: grey;
+}
+.match-content a{
+    font-size: 17px;
+    color: rgb(42, 141, 110);
+}
+.match-con-3 p{
+    padding-bottom: 17px;
+}
+.match-content h2,
+.match-content p,
+.match-content i,
+.match-content a {
+    position: relative; /* Keeps elements on top of the overlay */
+    z-index: 3; /* Ensures text and icons are above both the overlay and content */
+}
+.match-content:hover h2{
+    color: white;
+}
+.match-content:hover p{
+    color: black;
+}
+.match-content:hover .match-icon{
+    color: rgb(35, 87, 70);
+}
+.match-content:hover a{
+    color: rgb(25, 66, 53);
+}
+.match-content:after{
+    content: "";
+    position: absolute;
+    width: 0 ;
+    height: 0 ;
+    top: 0;
+    left: 0;
+    transition: 0.5s ;
+    background-color: rgb(35, 87, 70);
+    opacity: 0;
+    border-radius: 10px;
+    z-index: 1;
+}
+.match-content:hover::after   {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.3;
+}
+/* match end */
+/* stars start */
+.the-stars{
+    background-color: rgb(248, 255, 253);
+    height: fit-content;
+}
+
+
+.the-stars{
+    width: 100%;
+    height: 87vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.stars-title{
+    color: black;
+    margin-top: 80px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-top: 30px;
+}
+.stars-line , .gift-line , .join-line , .news-line{
+    width: 85px;
+    height: 4px;
+    margin: auto;
+    margin-top: 7px;
+    background-color: rgb(42, 141, 110);
+}
+.stars-container , .stars-container-2{
+    width: 70%;
+    margin: auto;
+}
+.stars-container-2{
+    padding-top: 30px;
+}
+.stars-parent{
+    overflow: auto;
+    padding-top: 40px;
+}
+.stars-content{
+    float: left;
+    width: 31%;
+    padding: 14px 18px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    position: relative;
+    padding: 0px;
+    height: 200px;
+}
+.stars-con-2 , .stars-con-5{
+    margin: 0px 3.5%;
+}
+.stars-img{
+    height: 200;
+}
+.stars-img img{
+    width: 100%;
+    height: 100%;
+}
+.stars-overley h2{
+    font-size: 35px;
+    color: rgb(196, 195, 195);
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.stars-overley p{
+    font-size: 20px;
+    color: whitesmoke;
+    padding-bottom: 30px;
+}
+.stars-overley a{
+    font-size: 20px;
+    color: whitesmoke;
+}
+.stars-overley .stars-like:hover{
+    color: red;
+}
+.stars-overley .stars-share:hover{
+    color: blue;
+}
+.stars-overley{
+    position: absolute;  
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+}
+.stars-content:hover .stars-overley{
+    visibility: visible;
+    transition: 1s;
+}
+/* stars end */
+/* services start */
+
+.services-container , .services-container-2{
+    width: 80%;
+    margin: auto;
+}
+.services-parent , .services-parent-2{
+    overflow: auto;
+    padding-top: 20px;
+}
+.services-con-5{
+    margin: 0px 8%;
+}
+.services-parent i{
+    color: rgb(42, 141, 110);
+    margin: 20px 15px;
+    font-size: 25px;
+}
+.services-parent h2{
+    font-size: 23px;
+    margin: 10px 0px;
+    display: inline-block;
+}
+.services-parent p{
+    font-size: 16px;
+    margin: 20px 0px;
+    color: grey;
+}
+.services-content a{
+    font-size: 17px;
+    color: rgb(42, 141, 110);
+}
+.services-con-3 p{
+    padding-bottom: 17px;
+}
+.services-parent-2 i{
+    color: rgb(42, 141, 110);
+    margin: 20px 15px;
+    font-size: 25px;
+}
+.services-parent-2 h2{
+    font-size: 23px;
+    margin: 10px 0px;
+    display: inline-block;
+}
+.services-parent-2 p{
+    font-size: 16px;
+    margin: 20px 0px;
+    color: grey;
+}
+.services-con-6 p{
+    padding-bottom: 17px;
+}
+.services-content h2,
+.services-content p,
+.services-content i,
+.services-content a {
+    position: relative; /* Keeps elements on top of the overlay */
+    z-index: 3; /* Ensures text and icons are above both the overlay and content */
+}
+.services-content:hover h2{
+    color: rgb(35, 87, 70);
+}
+.services-content:hover p{
+    color: black;
+}
+.services-content:hover .services-icon{
+    color: rgb(35, 87, 70);
+}
+.services-content:hover a{
+    color: rgb(25, 66, 53);
+}
+.services-content:after{
+    content: "";
+    position: absolute;
+    width: 0 ;
+    height: 0 ;
+    top: 0;
+    left: 0;
+    transition: 0.5s ;
+    background-color: rgb(35, 87, 70);
+    opacity: 0;
+    border-radius: 10px;
+    z-index: 1;
+}
+.services-content:hover::after   {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.3;
+}
+/* services end */
+/* adoption start */
+.the-adoption{
+    width: 100%;
+    height: 100vh;
+}
+.adoption-container{
+    width: 80%;
+    margin: auto;
+    margin-top: 150px;
+    overflow: auto;
+    height: 500px;
+}
+.adoption-content{
+    float: left; 
+    width: 50%; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.adoption-img{
+    position: relative;
+    float: left;  
+    width: 35%;
+    height: 100%;
+    margin-left: 15%;
+    text-align: center;
+}
+.adoption-img img{
+    width: 90%;
+    height: 90%;
+    display: block;
+}
+.adoption-h2{
+    font-size: 35px;
+    text-transform: capitalize;
+    padding-top: 30px;
+}
+.adoption-line{
+    width: 75px;
+    height: 4px;
+    margin-top: 7px;
+    background-color: rgb(42, 141, 110);
+}
+.adoption-main-p{
+    padding: 40px 0px;
+    color: grey;
+}
+.adoption-main-p , .adoption-p{
+    font-size: 16px;
+    font-weight: bold;
+}
+.adoption-p{
+    padding-bottom: 20px;
+    color: rgb(82, 82, 82);
+}
+.adoption-content i{
+    color: rgb(42, 141, 110);
+}
+.adoption-ul{
+    margin-top: 10px;
+}
+.adoption-ul li{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    border-radius: 100%;
+    background-color: grey;
+}
+.adoption-ul .adoption-li{
+    background-color: rgb(42, 141, 110);
+}
+.adoption-ul li:hover{
+    background-color: rgb(42, 141, 110);
+}
+/* adoption end */
+/* icon start */
+.the-icon , .the-pet{
+    width: 100%;
+    height: 80vh;
+}
+.icon-parent{
+    width: 100%;
+    height: 400px;
+    background-image: url(../imgs/iiicon.png);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.icon-container{
+    position: absolute;
+    width: 68%;
+    margin: auto;
+    overflow: auto;
+    /* hero img */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50% , -50% );
+    text-align: center;
+}
+.icon-content{
+    float: left;
+    width: 21.25%;
+}
+.i-con-2{
+    margin: 0px 5%;
+}
+.i-con-3{
+    margin-right: 5%;
+}
+.icon-content i{
+    font-size: 50px;
+    color: rgb(42, 141, 110);
+    padding-bottom: 15px;
+}
+.icon-content .icon-num{
+    font-size: 20px;
+}
+.icon-content p{
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: white;
+    padding-bottom: 5px;
+}
+/* icon end */
+/* gift start */
+.gift-title , .join-title , .news-title{
+    color: black;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-top: 30px;
+}
+.gift-container{
+    width:70%;
+    margin: auto;
+}
+.gift-parent{
+    overflow: auto;
+    padding-top: 50px;
+}
+.gift-content{
+    float: left;
+    width: 30%;
+    height: 390px; 
+    padding: 14px 18px;
+    text-align: center;
+    border: 1px solid rgb(42, 141, 110);
+    border-radius: 10px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    position: relative;
+    font-weight: bold;
+    z-index: 2;
+}
+.gft-con-2{
+    margin: 0px 5%;
+}
+.gift-main-p{
+    font-size: 17px;
+    padding: 20px 0px;
+}
+.gift-price{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 100%;
+    border: 2px solid rgb(42, 141, 110);
+    margin-bottom: 25px;
+}
+.gift-price-p{
+    font-size: 40px;
+    padding-top: 15px;
+}
+.gift-features p{
+    padding: 10px 0px;
+    font-size: 15px;
+}
+.gift-btn{
+    width: 160px;
+    height: 30px;
+    font-size: 15px;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: 2px solid rgb(42, 141, 110);
+    border-radius: 8px;
+    margin: 20px;
+}
+.the-gift h2,
+.gift-content p,
+.gift-content span,
+.gift-content button {
+    position: relative; /* Keeps elements on top of the overlay */
+    z-index: 3; /* Ensures text and icons are above both the overlay and content */
+}
+.gift-content:hover .gift-main-p{
+    color: white;
+}
+.gift-content:hover .gift-price{
+    border-color: rgb(25, 66, 53);
+}
+.gift-content:after{
+    content: "";
+    position: absolute;
+    width: 100% ;
+    height: 0 ;
+    top: 0;
+    left: 0;
+    transition: 0.5s ;
+    background-color: rgb(35, 87, 70);
+    opacity: 0;
+    border-radius: 10px;
+    z-index: 1;
+}
+.gift-content:hover::after{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.3;
+}
+/* gift end */
+/* pet start */
+.the-pet{
+    width: 100%;
+    height: 80vh;
+}
+.pet-container{
+    width: 65%;
+    margin: auto;
+    background-color: aqua;
+}
+.pet-parent-1{
+    width: 100%;
+    height: 400px;
+    margin-top: 170px;
+    background-image: url(../imgs/pet-wall.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: auto;
+}
+.pet-parent{
+    margin-top: 130px;
+}
+.pet-content{
+    width: 45%;
+    float: left;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.pet-con-2{
+    margin-left: 10%;
+}
+.pet-img{
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    margin-bottom: 10px;
+    float: left; /* Places the image to the left */
+    margin-right: 15px;
+}
+.pet-emp{
+    overflow: hidden;
+    margin-top: 20px;
+}
+.pet-emp h2 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+}
+.pet-emp p {
+    margin: 8px 0px;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: rgb(161, 196, 184);
+}
+.pet-con-p{
+    clear: both;
+    color: rgb(227, 241, 236);
+    text-transform: capitalize;
+    padding-top: 10px;
+    letter-spacing: 1px;
+    line-height: 23px;
+    font-size: 15px;
+}
+/* endddddd */
+/* start */
+.join-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+}
+.join-parent{
+    overflow: auto;
+    position: relative;
+}
+.join-content {
+    float: left;
+    background-color: rgb(226, 223, 223);
+    width: 30%;
+    padding: 14px  18px;
+    text-align: center;
+    border-radius: 10px;
+    height: 300px;
+    position: relative;
+}
+.join-con-2 {
+    margin: 0px  5%;
+}
+.join-img {
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+.join-img  img {
+    width: 100%;
+}
+
+.join-overley {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    visibility: hidden;
+}
+.join-content:hover .join-overley{
+    visibility: visible;
+}
+.join-overley a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(42, 141, 110);
+    color: #fff;
+    font-size: 23px ;
+    margin-left: auto ;
+}
+.join-overley  a  i {
+    line-height: 40px ;
+}
+
+.join-info-title {
+    text-transform: uppercase;
+    padding: 12px  0px;
+    color: rgb(58, 58, 58);
+}
+.join-info-sp1 {
+    text-transform: capitalize;
+    color: grey;
+}
+.join-content:hover  .join-info-title {
+    color: #fff;
+}
+.join-content:hover  .join-info-sp1 {
+    color: rgb(42, 141, 110);
+}
+.join-content:after{
+    content: "";
+    position: absolute;
+    width: 100% ;
+    height: 0 ;
+    top: 0;
+    left: 0;
+    transition: 0.5s ;
+    background-color: rgb(35, 87, 70);
+    opacity: 0;
+    border-radius: 10px;
+    z-index: 1;
+}
+.join-content:hover::after{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.3;
+}
+/* join end */
+/* news start */
+.the-news{
+    width: 100%;
+    margin-top: 100px;
+}
+.the-news .news-line{
+    width: 70px;
+}
+.news-container{
+    width: 80%;
+    height: 568px;
+    margin: auto;
+    margin-top: 50px;
+}
+.news-parent{
+    position: relative;
+    overflow: auto;
+}
+.news-content{
+    width: 30%;
+    height: 100%;
+    position: relative;
+    float: left;
+    border: 1px solid rgb(42, 141, 110);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 2;
+}
+.news-con-2{
+    margin: 0px 5%;
+}
+.news-content img{
+    width: 250px;
+    height: 250px; 
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+.news-con-info{
+    padding: 20px 0px;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+.news-content span{
+    padding: 0px 5px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.news-content i{
+    color: rgb(42, 141, 110);
+}
+.news-main-p{
+    padding-bottom: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.news-p{
+    font-weight: bold;
+    color: grey;
+    letter-spacing: 1px;
+    padding-bottom: 15px;
+}
+.news-content a{
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: rgb(42, 141, 110);
+}
+.news-con-2 .news-p{
+    padding-bottom: 35px;
+}
+.news-content img,
+.news-content span,
+.news-content p,
+.news-content a {
+    position: relative; /* Keeps elements on top of the overlay */
+    z-index: 3; /* Ensures text and icons are above both the overlay and content */
+}
+.news-content:hover span,
+.news-content:hover .news-p{
+    color: rgb(25, 66, 53);
+}
+.news-content:hover .news-main-p{
+    color: white;
+}
+.news-content:after{
+    content: "";
+    position: absolute;
+    width: 100% ;
+    height: 0 ;
+    top: 0;
+    left: 0;
+    transition: 0.5s ;
+    background-color: rgb(35, 87, 70);
+    opacity: 0;
+    border-radius: 10px;
+    z-index: 1;
+}
+.news-content:hover::after{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.3;
+}
+/* news end */
+/* footer start */
+.the-footer{
+    width: 100%;
+    height: 350px;
+    margin-top: 100px;
+    background-color: rgb(207, 230, 223);
+}
+.footer-container{
+    width: 30%;
+    height: 100%;
+    margin: auto;
+    padding-top: 20px;
+}
+.footer-content{
+    text-align: center;
+    text-transform: capitalize;
+}
+.footer-img{
+    width: 260px;
+    height: 200px;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+}
+.footer-content i{
+    font-size: 50px;
+    color: rgb(42, 141, 110);
+    padding: 20px 5px 10px 5px;
+}
+.footer-content p{
+    color: rgb(87, 87, 87);
+    font-weight: bold;
+    font-size: 15px;
+}
+.footer-content i:hover{
+    color: rgb(25, 66, 53);
+    transition: 0.2s;
+}
+
